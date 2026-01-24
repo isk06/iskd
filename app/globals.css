@@ -1,0 +1,781 @@
+/* ===============================
+   RESET & BASE
+================================ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background: #ffffff;
+  color: #111;
+  line-height: 1.6;
+}
+
+
+/* ===============================
+   LINKS
+================================ */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* ===============================
+   HERO / HEADER
+================================ */
+
+.hero {
+  width: 100%;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.hero-gray {
+  background: #f5f5f5;
+}
+
+.hero-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.hero-logo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #ffffff;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.hero-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.hero-subtitle {
+  font-size: 15px;
+  color: #555;
+  margin-top: 4px;
+}
+
+/*.hero-socials {
+  margin-left: auto;
+  display: flex;
+  gap: 12px;
+}
+
+.hero-socials a {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}*/
+
+/* ===============================
+   SECTIONS
+================================ */
+
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 24px;
+}
+
+.section h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* ===============================
+   ABOUT / CONTACT
+================================ */
+
+.about {
+  max-width: 760px;
+  color: #666;
+  font-size: 15px;
+}
+
+.contact {
+  font-weight: 400;
+  margin-top: 6px;
+  color: #666;
+  font-size: 15px;
+}
+
+/* ===============================
+   EXCEL-LIKE FREEZE (MY WORKS)
+================================ */
+
+.works-sticky { 
+  background: #ffffff;
+  padding: 12px 0;
+  z-index: 100;
+  margin-left: -21px; /* moves left my works block */
+}
+
+/* FIXED STATE — CENTERED LIKE ALL OTHER SECTIONS */
+.works-sticky.fixed {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1100px; /*1100 - initial. 1600 moves freezing pane to the left to end  */
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+
+}
+
+/* Title inside sticky */
+.works-sticky h2 {
+  margin-bottom: 12px;
+  padding: 0 24px;
+}
+
+/* Tabs row */
+.works-tabs {
+  display: flex;
+  gap: 32px;
+  padding: 0 24px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* Tabs */
+.tab {
+  background: none;
+  border: none;
+  padding-bottom: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+}
+
+.tab.active {
+  border-bottom-color: #1f6fff;
+}
+
+
+/* ===============================
+   TABS – SMOOTH
+================================ */
+
+.tabs {
+  display: flex;
+  gap: 32px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tab {
+  position: relative;
+  padding: 12px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  font-size: 15px;
+  font-weight: 400;
+  color: #9ca3af;
+
+  transition:
+    color 0.25s ease,
+    font-weight 0.25s ease;
+}
+
+/* underline (exists always, but hidden) */
+.tab::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 2px;
+  background-color: #2563eb;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.tab:hover {
+  color: #111827;
+}
+
+.tab.active {
+  font-weight: 600;
+  color: #111827;
+}
+
+/* animate underline in */
+.tab.active::after {
+  transform: scaleX(1);
+}
+
+/* ===============================
+   TABS – CONSULTING STYLE
+================================ */
+
+.tabs-wrapper {
+  position: relative;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tabs {
+  display: flex;
+  gap: 32px;
+}
+
+.tab {
+  padding: 12px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  font-size: 15px;
+  font-weight: 400;
+  color: #9ca3af;
+  text-align: left;
+
+  transition: color 0.25s ease, font-weight 0.25s ease;
+}
+
+.tab:hover {
+  color: #111827;
+}
+
+.tab.active {
+  font-weight: 600;
+  color: #111827;
+}
+
+/* moving underline */
+.tab-underline {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  height: 2px;
+  background-color: #2563eb;
+
+  transition:
+    transform 0.3s ease,
+    width 0.3s ease;
+}
+
+
+
+
+/* ===============================
+   PORTFOLIO CONTENT
+================================ */
+
+.works-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+  margin-left: -21px; /* move left images cards*/
+}
+
+/* Grid */
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ===============================
+   PROJECT CARD
+================================ */
+
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  cursor: zoom-in;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-caption {
+  margin-top: auto;.card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  display: none;
+  flex-direction: column;
+  cursor: zoom-in;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* image container behavior */
+.card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+
+  transition: transform 0.4s ease;
+}
+
+/* magnify on hover */
+.card:hover img {
+  transform: scale(1.06);
+}
+  padding: 14px 16px;
+  font-size: 13px;
+  color: #666;
+  background: #ffffff;
+}
+
+/* ===============================
+   IMAGE MODAL
+================================ */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 1000;
+  overflow: auto;
+  padding: 32px 16px;
+}
+
+/* IMPORTANT: force modal image larger than card */
+.modal-image {
+  display: block;
+  margin: 0 auto;
+  width: 80vw;          /* FORCE enlargement */
+  max-width: 900px;    /* safety cap for desktop */
+  height: auto;
+  max-height: none;    /* allow tall images */
+  border-radius: 8px;
+  cursor: zoom-out;
+}
+
+/* ===============================
+   MOBILE — EVEN BIGGER
+================================ */
+
+@media (max-width: 768px) {
+  .modal-image {
+    width: 150vw;        /* clearly bigger than card */
+  }
+}
+
+
+/* ===============================
+   PDF CARD CAPTION
+================================ */
+
+.pdf-card {
+  cursor: pointer;
+}
+
+.pdf-caption {
+  margin-top: auto;
+  padding: 14px 16px;
+  background: #ffffff;
+}
+
+.pdf-open {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1f6fff;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.pdf-arrow {
+  transition: transform 0.2s ease;
+}
+
+.pdf-card:hover .pdf-arrow {
+  transform: translateX(4px);
+}
+
+
+
+
+
+
+
+
+/* ===============================
+   FOOTER
+================================ */
+
+.footer {
+  background: #f5f5f5;
+  border-top: 1px solid #e6e6e6;
+  padding: 24px 16px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* LEFT DISCLAIMER */
+.footer-left {
+  max-width: 360px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #555
+}
+
+
+/* Keep center truly centered */
+.footer-inner {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Prevent center shift */
+.footer-center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-center p {
+  margin: 0;
+}
+
+.footer-sub {
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* Socials stay right */
+.footer-socials {
+  position: absolute;
+  right: 24px;
+  display: flex;
+  gap: 10px;
+}
+
+.footer-socials img {
+  width: 40px;
+  height: 40px;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.footer-socials img:hover {
+  opacity: 5;
+}
+
+
+
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-socials {
+    margin-left: 0;
+  }
+
+  .works-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .works-sticky.fixed {
+    position: static;
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+/* ===============================
+   CONTACT FORM 12012026
+================================ */
+
+.contact-section {
+  margin-top: 48px;
+}
+
+.contact-form {
+  max-width: 520px;
+  margin-top: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #111;
+}
+
+.form-group label span {
+  color: #2563eb;
+  margin-left: 2px;
+}
+
+.form-group input,
+.form-group textarea {
+  font-family: inherit;
+  font-size: 14px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.form-submit {
+  margin-top: 8px;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #2563eb;
+  cursor: pointer;
+}
+
+.form-submit:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+   CONTACT FORM BUTTON
+================================ */
+
+.form-submit {
+  margin-top: 12px;
+  padding: 12px 20px;
+
+  background: #1f6fff;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.form-submit:hover {
+  background: #1a58cc;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(31, 111, 255, 0.25);
+}
+
+.form-submit:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+
+
+
+/* ===============================
+   MOBILE
+================================ */
+
+@media (max-width: 768px) {
+  .contact-form {
+    max-width: 100%;
+  }
+}
+
+/* ===============================
+   BACK TO TOP BUTTON
+================================ */
+
+.back-to-top {
+  position: fixed;
+  bottom: 80px;
+  right: 32px;
+
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+  border: 1px solid #e5e5e5;
+  background: #ffffff;
+
+  font-size: 20px;
+  font-weight: 500;
+  color: #111;
+
+  cursor: pointer;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.back-to-top:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    right: 16px;
+    bottom: 20px;
+  }
+}
+
+/* ===============================
+   IMAGE MODAL NAVIGATION
+================================ */
+
+/* ===== Modal arrows on image ===== */
+.modal-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-arrow:hover {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.modal-arrow-left {
+  left: 12px;
+}
+
+.modal-arrow-right {
+  right: 12px;
+}
+
+/* Mobile: same arrows, touch-friendly */
+@media (max-width: 768px) {
+  .modal-arrow {
+    width: 44px;
+    height: 44px;
+    font-size: 26px;
+  }
+}
+
+
+
+/* ===============================
+   ABOUT ME TEXT CONSISTENCY
+================================ */
+
+.section .about,
+.section .about-list,
+.section .about-list li {
+  font-size: 15px;       /* same as your .about text */
+  color: #666;           /* same text color */
+  line-height: 1.6;
+}
+
+.section .about-list {
+  padding-left: 20px;    /* keep bullets aligned */
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+
+.section .about-list li {
+  margin-bottom: 8px;    /* spacing between list items */
+}
+
