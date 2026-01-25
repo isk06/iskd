@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="footer-inner">
         {/* LEFT — disclaimer */}
         <div className="footer-left">
-          All visuals, except icons, are designed by I. Daraev. All data research and
+          All slides, charts, visuals, except icons, are designed by I. Daraev. All data research and
           analysis performed by I. Daraev.
         </div>
 
