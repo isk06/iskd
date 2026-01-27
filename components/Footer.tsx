@@ -10,7 +10,7 @@ export default function Footer() {
 
         {/* CENTER — copyright */}
         <div className="footer-center">
-          <p>© 2026 | Built with Next.js & Vercel by Iskander Daraev</p>
+          <p>© 2025-2026 | Built with git & Vercel by Iskander Daraev</p>
           <p className="footer-sub">
             This site does not collect information about visitors or use analytics tools
           </p>
