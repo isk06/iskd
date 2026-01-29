@@ -31,6 +31,10 @@ export default function HomePage() {
       cover: "/pdf-covers/Sorwe.png",
       title: "Sorwe"},
 
+    { file: "/pdfs/EcoTank.pdf", 
+      cover: "/pdf-covers/Sorwe.png",
+      title: "EcoTank"},
+      
     // Add more PDFs here
   ];
 
