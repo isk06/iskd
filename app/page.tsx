@@ -34,6 +34,11 @@ export default function HomePage() {
     { file: "/pdfs/EcoTank.pdf", 
       cover: "/pdf-covers/Ecotank.jpg",
       title: "EcoTank"},
+      
+    { file: "/pdfs/Zero.pdf", 
+      cover: "/pdf-covers/Zero.jpg",
+      title: "Zero eDiscovery"},
+      
 
     // Add more PDFs here
   ];
