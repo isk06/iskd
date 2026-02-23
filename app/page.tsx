@@ -53,17 +53,20 @@ export default function HomePage() {
 
               {/* Key Facts */}
               <div>
-                <h3>Key Facts</h3>
+                <h3>About</h3>
                 <ul className="fact-list">
-                  <li><strong>Remote From:</strong> Anywhere</li>
-                  <li><strong>Contract:</strong> Fixed term</li>
-                  <li><strong>Language:</strong> English</li>
+                  <li>15+ years of experience in presentation design</li>
+                  <li>Cross-specialist with experience in the public sector and consulting</li>
+                  <li>Extensive executive and management experience</li>
+                  <li>Expert-level skills in Microsoft PowerPoint (including VBA macros)</li>
+                  <li>Proficient in Adobe Illustrator, Photoshop, Figma</li>
+                  <li>Strong data visualization skills with ability to turn ideas into strong visuals</li>
                 </ul>
               </div>
 
               {/* Hard Skills */}
               <div>
-                <h3>Hard Skills</h3>
+                <h3>Tools</h3>
                 <div className="skills-pills">
                   <span>PowerPoint</span>
                   <span>Excel</span>
@@ -80,15 +83,15 @@ export default function HomePage() {
 
               {/* Other Skills */}
               <div>
-                <h3>Other Skills</h3>
+                <h3>Specialization and expertize</h3>
                 <ul className="bullet-list">
-                  <li>Storytelling (Pyramid Principle, SCR framework)</li>
-                  <li>Quick immersion in new industries and business chains</li>
-                  <li>Creative Problem Solving</li>
-                  <li>Team organization and process optimization</li>
-                  <li>Accountability</li>
-                  <li>Ability To Meet Deadlines</li>
-                  
+                  <li><strong>Core competencies:</strong>presentations design 
+                  (C-level/executive, board, consulting, analytical, investor, marketing, financial, pitches), visualization 
+                  of complex economic and financial data, analysis, storytelling (Pyramid Principle, SCR framework),  
+                  information structuring, formatting and layout (Big4, Big3)</li>
+                  <li><strong>Visuals:</strong>financial and custom diagrams, charts and metrics (Excel/PowerPoint), maps, tables</li>
+                  <li><strong>Products:</strong>business presentations, client reports, marketing materials (proposals, memos, one-pagers, annual reports)</li>
+            
                 </ul>
               </div>
 
@@ -100,22 +103,25 @@ export default function HomePage() {
             <div className="job-bottom-grid">
 
               <div>
-                <h3>Roles & Responsibilities</h3>
+                <h3>Other skills</h3>
                 <ul className="bullet-list">
-                  <li>5+ years of experience in presentation graphic design</li>
-                  <li>Expert-level skills in Microsoft PowerPoint and Google Slides</li>
-                  <li>Proficient in Adobe Illustrator, Photoshop, and XD</li>
-                  <li>Strong Figma skills with ability to turn ideas into strong visuals</li>
+                  <li>Quick immersion in new industries and business chains</li>
+                  <li>Creative Problem Solving</li>
+                  <li>Team organization and process optimization</li>
+                  <li>Accountability</li>
+                  <li>Ability to meet deadlines</li>
                 </ul>
               </div>
 
               <div>
-                <h3>Requirements</h3>
+                <h3>Additional education & certifications</h3>
                 <ul className="bullet-list">
-                  <li>Create on-strategy, on-brand presentation materials</li>
-                  <li>Deliver strong conceptual thinking with high-quality execution</li>
-                  <li>Pay close attention to detail in every slide</li>
-                  <li>Research industry trends and continuously improve output</li>
+                  <li><strong>2025:</strong>Introduction to Corporate Finance (The Wharton School of the University of Pennsylvania)</li>
+                  <li><strong>2024:</strong>Consulting Presentations and Storytelling (Emory University), Business Presentations with PPT (PwC), UX/UI design (Google, IBM)</li>
+                  <li><strong>2023:</strong>Google IT Automation with Python Certificate (Google)</li>
+                  <li><strong>2022:</strong>ISTQB (ASTQB); PCEP – Certified Entry-Level Python Programmer (Python Institute); 
+                  Higher School of Economics - Python  for data analysis (on-site)</li>
+                  <li><strong>2021:</strong>IELTS Academic; Business Case Structuring (Fless)</li>
                 </ul>
               </div>
 
@@ -129,17 +135,18 @@ export default function HomePage() {
               <div className="company-header">
                 <div className="company-logo">ID</div>
                 <h3>Iskander Daraev</h3>
+                <h3>Current position:</h3>
               </div>
 
               <div className="company-info">
-                <p><strong>Founded:</strong> 2010</p>
-                <p><strong>Company size:</strong> Independent</p>
+                <p><strong>Company:</strong> Deloitte CIS, 2023 - present</p>
+                <p><strong>Title:</strong> Manager, Head of Report Production and Information Design</p>
+                <p><strong>Department:</strong> Financial Advisory</p>
               </div>
 
               <div className="company-links">
-                <a href="#">Website</a>
                 <a href="https://www.linkedin.com/in/iskdaraev/" target="_blank">LinkedIn</a>
-                <a href="#portfolio">See portfolio →</a>
+                <a href="https://www.behance.net/iskdaraev" target="_blank">Behance</a>
               </div>
             </div>
           </div>
