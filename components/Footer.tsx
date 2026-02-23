@@ -16,7 +16,8 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* RIGHT — socials */}
+        
+        {/* RIGHT — socials 
         <div className="footer-socials">
           <a
             href="https://www.linkedin.com/in/iskdaraev"
@@ -35,7 +36,7 @@ export default function Footer() {
           >
             <img src="/icons/behance.svg" alt="Behance" />
           </a>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

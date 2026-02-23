@@ -85,7 +85,7 @@ export default function HomePage() {
               <div>
                 <h3>Specialization and expertize</h3>
                 <ul className="bullet-list">
-                  <li><strong>Core competencies:</strong> presentations design 
+                  <li><strong>Core competencies:</strong> presentation design 
                   (C-level/executive, board, consulting, analytical, investor, marketing, financial, pitches), visualization 
                   of complex economic and financial data, analysis, storytelling (Pyramid Principle, SCR framework),  
                   information structuring, formatting and layout (Big4, Big3)</li>
@@ -117,7 +117,7 @@ export default function HomePage() {
                 <h3>Additional education & certifications</h3>
                 <ul className="bullet-list">
                   <li><strong>2025:</strong> Introduction to Corporate Finance (The Wharton School of the University of Pennsylvania)</li>
-                  <li><strong>2024:</strong> Consulting Presentations and Storytelling (Emory University), Business Presentations with PPT (PwC), UX/UI design (Google, IBM)</li>
+                  <li><strong>2024:</strong> Consulting Presentations and Storytelling (Emory University), Business Presentations with PowerPoint (PriceWaterhouseCoopers), UX/UI design (Google, IBM)</li>
                   <li><strong>2023:</strong> Google IT Automation with Python Certificate (Google)</li>
                   <li><strong>2022:</strong> ISTQB (ASTQB); PCEP – Certified Entry-Level Python Programmer (Python Institute); 
                   Higher School of Economics - Python  for data analysis (on-site)</li>
