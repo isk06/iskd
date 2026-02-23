@@ -85,12 +85,12 @@ export default function HomePage() {
               <div>
                 <h3>Specialization and expertize</h3>
                 <ul className="bullet-list">
-                  <li><strong>Core competencies:</strong>presentations design 
+                  <li><strong>Core competencies:</strong> presentations design 
                   (C-level/executive, board, consulting, analytical, investor, marketing, financial, pitches), visualization 
                   of complex economic and financial data, analysis, storytelling (Pyramid Principle, SCR framework),  
                   information structuring, formatting and layout (Big4, Big3)</li>
-                  <li><strong>Visuals:</strong>financial and custom diagrams, charts and metrics (Excel/PowerPoint), maps, tables</li>
-                  <li><strong>Products:</strong>business presentations, client reports, marketing materials (proposals, memos, one-pagers, annual reports)</li>
+                  <li><strong>Visuals:</strong> financial and custom diagrams, charts and metrics (Excel/PowerPoint), maps, tables</li>
+                  <li><strong>Products:</strong> business presentations, client reports, marketing materials (proposals, memos, one-pagers, annual reports)</li>
             
                 </ul>
               </div>
@@ -116,12 +116,12 @@ export default function HomePage() {
               <div>
                 <h3>Additional education & certifications</h3>
                 <ul className="bullet-list">
-                  <li><strong>2025:</strong>Introduction to Corporate Finance (The Wharton School of the University of Pennsylvania)</li>
-                  <li><strong>2024:</strong>Consulting Presentations and Storytelling (Emory University), Business Presentations with PPT (PwC), UX/UI design (Google, IBM)</li>
-                  <li><strong>2023:</strong>Google IT Automation with Python Certificate (Google)</li>
-                  <li><strong>2022:</strong>ISTQB (ASTQB); PCEP – Certified Entry-Level Python Programmer (Python Institute); 
+                  <li><strong>2025:</strong> Introduction to Corporate Finance (The Wharton School of the University of Pennsylvania)</li>
+                  <li><strong>2024:</strong> Consulting Presentations and Storytelling (Emory University), Business Presentations with PPT (PwC), UX/UI design (Google, IBM)</li>
+                  <li><strong>2023:</strong> Google IT Automation with Python Certificate (Google)</li>
+                  <li><strong>2022:</strong> ISTQB (ASTQB); PCEP – Certified Entry-Level Python Programmer (Python Institute); 
                   Higher School of Economics - Python  for data analysis (on-site)</li>
-                  <li><strong>2021:</strong>IELTS Academic; Business Case Structuring (Fless)</li>
+                  <li><strong>2021:</strong> IELTS Academic; Business Case Structuring (Fless)</li>
                 </ul>
               </div>
 
@@ -135,10 +135,10 @@ export default function HomePage() {
               <div className="company-header">
                 <div className="company-logo">ID</div>
                 <h3>Iskander Daraev</h3>
-                <h3>Current position:</h3>
               </div>
 
               <div className="company-info">
+                <h3><strong>Current position:</strong> Deloitte CIS, 2023 - present</h3>
                 <p><strong>Company:</strong> Deloitte CIS, 2023 - present</p>
                 <p><strong>Title:</strong> Manager, Head of Report Production and Information Design</p>
                 <p><strong>Department:</strong> Financial Advisory</p>
