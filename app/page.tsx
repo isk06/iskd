@@ -106,7 +106,7 @@ export default function HomePage() {
                 <h3>Other skills</h3>
                 <ul className="bullet-list">
                   <li>Quick immersion in new industries and business chains</li>
-                  <li>Creative Problem Solving</li>
+                  <li>Creative problem solving</li>
                   <li>Team organization and process optimization</li>
                   <li>Accountability</li>
                   <li>Ability to meet deadlines</li>
