@@ -69,15 +69,21 @@ export default function HomePage() {
                 <h3>Tools</h3>
                 <div className="skills-pills">
                   <span>PowerPoint</span>
+                  <span>VBA macros (PPT, Word, Excel)</span>
                   <span>Excel</span>
                   <span>Visio</span>
                   <span>Google Slides</span>
                   <span>Figma</span>
+                  <span>PPT Productivity</span>
+                  <span>think-cell</span>
                   <span>Presentation Design</span>
                   <span>Infographics</span>
                   <span>Data visualization</span>
                   <span>Financial charts</span>
                   <span>Adobe Creative Cloud</span>
+                  <span>Blender</span>
+                  <span>Python</span>
+                  <span>AI</span>
                 </div>
               </div>
 
@@ -91,7 +97,8 @@ export default function HomePage() {
                   information structuring, formatting and layout (Big4, Big3)</li>
                   <li><strong>Visuals:</strong> financial and custom diagrams, charts and metrics (Excel/PowerPoint), maps, tables</li>
                   <li><strong>Products:</strong> business presentations, client reports, marketing materials (proposals, memos, one-pagers, annual reports)</li>
-            
+                  <li><strong>Subject areas:</strong> strategic consulting, investment banks, fintech,
+      corporate finance, IT, industry</li>
                 </ul>
               </div>
 
