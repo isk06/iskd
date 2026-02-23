@@ -138,7 +138,7 @@ export default function HomePage() {
               </div>
 
               <div className="company-info">
-                <h3><strong>Current position:</strong> Deloitte CIS, 2023 - present</h3>
+                <h3><strong>Current position</strong></h3>
                 <p><strong>Company:</strong> Deloitte CIS, 2023 - present</p>
                 <p><strong>Title:</strong> Manager, Head of Report Production and Information Design</p>
                 <p><strong>Department:</strong> Financial Advisory</p>
