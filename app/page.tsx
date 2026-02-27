@@ -21,12 +21,14 @@ export default function HomePage() {
     { file: "/pdfs/EcoTank.pdf", cover: "/pdf-covers/Ecotank.jpg", title: "EcoTank" },
     { file: "/pdfs/Zero.pdf", cover: "/pdf-covers/Zero.jpg", title: "Zero eDiscovery" },
     { file: "/pdfs/Volac.pdf", cover: "/pdf-covers/Volac.jpg", title: "Volac - Board Presentation" },
-    { file: "/pdfs/Idbi.pdf", cover: "/pdf-covers/Idbi.jpg", title: "IDBI Bank - Investors Presentation" },
   ];
 
+  
+    {/* file: "/pdfs/Idbi.pdf", cover: "/pdf-covers/Idbi.jpg", title: "IDBI Bank - Investors Presentation" */}
+    
   return (
     <>
-      {/* ================= HEADER ================= */}
+      {/* ================= HEADER ================= 
       <section className="hero hero-gray">
         <div className="hero-content">
           <div className="hero-logo">
@@ -39,7 +41,7 @@ export default function HomePage() {
             </p>
           </div>
         </div>
-      </section>
+      </section>*/}
 
       {/* ================= JOB STYLE LAYOUT ================= */}
       <section className="section">
@@ -199,7 +201,7 @@ export default function HomePage() {
       </section>
 
       <BackToTop />
-      <Footer />
+      {/*<Footer />*/}
     </>
   );
 }
