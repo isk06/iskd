@@ -784,9 +784,9 @@ a:hover {
 ================================ */
 
 .job-wrapper {
-  max-width: 1600px;
-  margin: 0 auto;
-  padding: 40px 20px;
+  max-width: 1600px;      /* match header width */
+  margin: 0;              /* remove centering */
+  padding: 40px 8%;       /* same horizontal padding as header */
 }
 
 .job-header {
@@ -903,13 +903,21 @@ a:hover {
   font-size: 18px;   /* slightly smaller section titles */
 }
 
-.fact-list,
-.bullet-list,
-.company-info,
-.company-links {
-  font-size: 14px;   /* reduced body text */
+/* ===== LEFT MAIN PANE TEXT ===== */
+.job-main-card .fact-list,
+.job-main-card .bullet-list {
+  font-size: 14px;
   list-style-position: outside;
-  padding-left: 14px;   /* key facts bullet consistent indent */
+  padding-left: 14px;
+  margin: 0;
+}
+
+/* ===== RIGHT SIDEBAR TEXT ===== */
+.job-sidebar .company-info,
+.job-sidebar .company-links {
+  font-size: 14px;
+  list-style-position: outside;
+  padding-left: 50px;
   margin: 0;
 }
 
@@ -984,10 +992,10 @@ a:hover {
   color: #1f6fff;
 }
 
-.project-column h3 {
+/*.project-column h3 {
   text-align: center;
   margin-bottom: 20px;
-}
+}*/
 
 .project-column img {
   width: 100%;
@@ -1011,14 +1019,18 @@ a:hover {
 
 
 
-/* ================= GLOBAL HEADER ================= */
+/* ===== GLOBAL HEADER (Aligned with Content) ===== */
 
 .global-header {
   background: #f5f5f5;
-  padding: 40px 8%;
+  padding: 40px 0;          /* remove horizontal % padding */
 }
 
 .header-inner {
+  max-width: 1100px;        /* same as main content */
+  margin: 0 auto;           /* center container */
+  padding: 0 20px;          /* controlled inner spacing */
+
   display: flex;
   align-items: center;
   gap: 24px;
@@ -1028,6 +1040,7 @@ a:hover {
   width: 80px;
   height: 80px;
   border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .header-name {
@@ -1081,11 +1094,16 @@ a:hover {
 .project-column h3 {
   position: sticky;
   top: 0;
-  background: white; /* IMPORTANT so images don't show through */
-  padding: 16px 0;
-  margin: 0;
-  z-index: 5;
+  background: #ffffff;
+  padding: 18px 0;
+  margin: 0 0 20px 0;
+  text-align: center;
+  font-weight: 600;
+  z-index: 20;
+  border-bottom: 1px solid #f0f0f0;
 }
+
+
 
 
 
