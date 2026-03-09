@@ -92,8 +92,8 @@ export default function HomePage() {
                   <li>15+ years of experience in presentation design</li>
                   <li>Cross-specialist with experience in public sector and consulting</li>
                   <li>Executive and management experience</li>
-                  <li>Expert-level Microsoft PowerPoint (incl. VBA macros)</li>
-                  <li>Adobe Illustrator, Photoshop, Figma</li>
+                  <li>Expert-level skills in Microsoft PowerPoint (incl. VBA macros)</li>
+                  <li>Proficient in Adobe Illustrator, Photoshop, Figma</li>
                   <li>Strong data visualization skills</li>
                 </ul>
               </div>
@@ -162,7 +162,7 @@ export default function HomePage() {
                 <h3>Other Skills</h3>
 
                 <ul className="bullet-list">
-                  <li>Fast immersion into new industries</li>
+                  <li>Fast immersion into new industries and business chains</li>
                   <li>Creative problem solving</li>
                   <li>Process optimization</li>
                   <li>Accountability</li>
@@ -175,30 +175,12 @@ export default function HomePage() {
 
                 <ul className="bullet-list">
 
-                  <li>
-                    <strong>2025:</strong> Introduction to Corporate Finance
-                    (Wharton School)
-                  </li>
-
-                  <li>
-                    <strong>2024:</strong> Consulting Presentations and
-                    Storytelling (Emory), PwC Business Presentations,
-                    UX/UI Design (Google, IBM)
-                  </li>
-
-                  <li>
-                    <strong>2023:</strong> Google IT Automation with Python
-                  </li>
-
-                  <li>
-                    <strong>2022:</strong> ISTQB, PCEP Python,
-                    HSE Python for Data Analysis
-                  </li>
-
-                  <li>
-                    <strong>2021:</strong> IELTS Academic,
-                    Business Case Structuring
-                  </li>
+                  <li><strong>2025:</strong> Introduction to Corporate Finance (The Wharton School of the University of Pennsylvania)</li>
+                  <li><strong>2024:</strong> Consulting Presentations and Storytelling (Emory University), Business Presentations with PowerPoint (PriceWaterhouseCoopers), UX/UI design (Google, IBM)</li>
+                  <li><strong>2023:</strong> Google IT Automation with Python Certificate (Google)</li>
+                  <li><strong>2022:</strong> ISTQB (ASTQB); PCEP – Certified Entry-Level Python Programmer (Python Institute); 
+                  Higher School of Economics - Python  for data analysis (on-site)</li>
+                  <li><strong>2021:</strong> IELTS Academic; Business Case Structuring (Fless)</li>
 
                 </ul>
               </div>
