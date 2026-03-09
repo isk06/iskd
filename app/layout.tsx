@@ -11,7 +11,7 @@ const manrope = Manrope({
 
 export const metadata = {
   title: "Iskander Daraev - portfolio",
-  description: "Consulting and Corporate Finance Presentations",
+  description: "Consulting, banking & Corporate Finance - analysis, storytelling & design",
   robots: {
     index: false,
     follow: false,
