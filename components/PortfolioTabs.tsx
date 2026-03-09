@@ -21,29 +21,46 @@ export type CaseStudyData = {
 type Props = {
   images: string[];
   pdfs: PdfData[];
-  charts: string[]; // ✅ NEW
+  charts: string[];
+  dashboards: string[];
 };
 
-export default function PortfolioTabs({ images, pdfs, charts }: Props) {
-  const [activeTab, setActiveTab] =
-    useState<"gallery" | "pdfs" | "charts">("gallery");
+type TabType = "gallery" | "pdfs" | "charts" | "dashboards";
 
+export default function PortfolioTabs({
+  images,
+  pdfs,
+  charts,
+  dashboards
+}: Props) {
+
+  const [activeTab, setActiveTab] = useState<TabType>("gallery");
+  const [activeImageIndex, setActiveImageIndex] = useState<number | null>(null);
   const [isFixed, setIsFixed] = useState(false);
-  const [activeImageIndex, setActiveImageIndex] =
-    useState<number | null>(null);
 
   const anchorRef = useRef<HTMLDivElement>(null);
   const freezePoint = useRef<number>(0);
 
-  // Hash listener
+  const caseStudies: CaseStudyData[] = [
+    {
+      slug: "Idbi",
+      cover: "/pdf-covers/Idbi.jpg",
+      title: "IDBI Bank - Investors Presentation",
+      description: "Presentation redesign and formatting"
+    }
+  ];
+
+  /* ================= HASH NAVIGATION ================= */
+
   useEffect(() => {
-    if (window.location.hash === "#presentations") {
-      setActiveTab("pdfs");
-    }
-    if (window.location.hash === "#charts") {
-      setActiveTab("charts");
-    }
+    const hash = window.location.hash;
+
+    if (hash === "#presentations") setActiveTab("pdfs");
+    if (hash === "#charts") setActiveTab("charts");
+    if (hash === "#dashboards") setActiveTab("dashboards");
   }, []);
+
+  /* ================= STICKY HEADER ================= */
 
   useEffect(() => {
     if (!anchorRef.current) return;
@@ -59,27 +76,27 @@ export default function PortfolioTabs({ images, pdfs, charts }: Props) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const caseStudies: CaseStudyData[] = [
-    {
-      slug: "Idbi",
-      cover: "/pdf-covers/Idbi.jpg",
-      title: "IDBI Bank - Investors Presentation",
-      description: "Presentation redesign and formatting"
-    }
-  ];
+  /* ================= IMAGE SOURCE ================= */
+
+  const getImagesForTab = () => {
+    if (activeTab === "charts") return charts.map(img => `/charts/${img}`);
+    if (activeTab === "dashboards") return dashboards.map(img => `/dashboards/${img}`);
+    return images.map(img => `/images/${img}`);
+  };
+
+  const currentImages = getImagesForTab();
 
   return (
     <>
       <div ref={anchorRef} />
 
-      {/* ===================== */}
-      {/* Sticky Header */}
-      {/* ===================== */}
+      {/* ================= HEADER ================= */}
 
       <div className={`works-sticky ${isFixed ? "fixed" : ""}`}>
         <h2>My works</h2>
 
         <div className="works-tabs">
+
           <button
             className={activeTab === "gallery" ? "tab active" : "tab"}
             onClick={() => setActiveTab("gallery")}
@@ -94,23 +111,29 @@ export default function PortfolioTabs({ images, pdfs, charts }: Props) {
             Presentations
           </button>
 
-          {/* ✅ NEW TAB */}
           <button
             className={activeTab === "charts" ? "tab active" : "tab"}
             onClick={() => setActiveTab("charts")}
           >
             Charts
           </button>
+
+          <button
+            className={activeTab === "dashboards" ? "tab active" : "tab"}
+            onClick={() => setActiveTab("dashboards")}
+          >
+            Dashboards
+          </button>
+
         </div>
       </div>
 
-      {/* ===================== */}
-      {/* Content */}
-      {/* ===================== */}
+      {/* ================= CONTENT ================= */}
 
       <div className="works-content">
 
         {/* ===== GALLERY ===== */}
+
         {activeTab === "gallery" && (
           <div className="works-grid">
             {images.map((img, index) => (
@@ -123,70 +146,44 @@ export default function PortfolioTabs({ images, pdfs, charts }: Props) {
           </div>
         )}
 
-        {/* ===== PDFS ===== */}
+        {/* ===== PRESENTATIONS ===== */}
+
         {activeTab === "pdfs" && (
           <div className="works-grid">
-            {caseStudies.map((study) => (
+
+            {caseStudies.map(study => (
               <a
                 key={study.slug}
                 href={`/case-studies/${study.slug}`}
-                className="card pdf-card"
-                style={{ textDecoration: "none" }}
+                className="card pdf-card case-study-card"
               >
+
                 <img
                   src={study.cover}
                   alt={study.title}
                   className="card-image"
-                  style={{
-                    width: "100%",
-                    height: "auto",
-                    objectFit: "cover",
-                  }}
                 />
 
-                <div
-                  className="card-caption"
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "flex-start",
-                    padding: "12px",
-                    gap: "2px",
-                  }}
-                >
-                  <span
-                    style={{
-                      fontSize: "14px",
-                      fontWeight: 500,
-                      color: "#111",
-                    }}
-                  >
+                <div className="card-caption">
+
+                  <div className="case-title">
                     {study.title}
-                  </span>
+                  </div>
 
-                  <span
-                    style={{
-                      fontSize: "14px",
-                      color: "#666",
-                    }}
-                  >
+                  <div className="case-description">
                     {study.description}
-                  </span>
+                  </div>
 
-                  <span
-                    style={{
-                      fontSize: "14px",
-                      fontWeight: 500,
-                      color: "#1f6fff",
-                    }}
-                  >
+                  <div className="case-link">
                     View case study →
-                  </span>
+                  </div>
+
                 </div>
+
               </a>
             ))}
 
-            {pdfs.map((pdf) => (
+            {pdfs.map(pdf => (
               <PdfCard
                 key={pdf.file}
                 file={pdf.file}
@@ -194,28 +191,29 @@ export default function PortfolioTabs({ images, pdfs, charts }: Props) {
                 title={pdf.title}
               />
             ))}
+
           </div>
         )}
 
         {/* ===== CHARTS ===== */}
+
         {activeTab === "charts" && (
           <div className="charts-wrapper">
 
-            {/* Gray description pane */}
             <div className="charts-description">
               <h3>Financial & Analytical Charts</h3>
+
               <p>
-                Selected custom charts created for consulting and banking presentations (predominantly in Excel/PowerPoint). 
-                Emphasis on the visualization of economic information and financial metrics (revenue and EBITDA forecasts, 
-                factor analysis, multiple comparison, value map, sensitivity analysis, DCF and WACC calculations; BS, PL).
+                Selected custom charts created for consulting and banking
+                presentations (mostly Excel / PowerPoint).
               </p>
 
               <p>
-                Areas of specialization (in charts): valuation, due diligence, transactions, M&A, consulting
+                Focus on visualization of financial metrics, valuation models,
+                WACC / DCF calculations, sensitivity analysis and benchmarking.
               </p>
             </div>
 
-            {/* 3-column grid */}
             <div className="works-grid">
               {charts.map((chart, index) => (
                 <ProjectCard
@@ -225,40 +223,61 @@ export default function PortfolioTabs({ images, pdfs, charts }: Props) {
                 />
               ))}
             </div>
+
+          </div>
+        )}
+
+        {/* ===== DASHBOARDS ===== */}
+
+        {activeTab === "dashboards" && (
+          <div className="dashboards-wrapper">
+
+            <div className="dashboards-description">
+              <h3>Analytical Dashboards</h3>
+
+              <p>
+                Business dashboards designed for executive reporting and
+                consulting projects. Focus on KPI tracking, financial
+                performance monitoring and strategic analytics.
+              </p>
+
+              <p>
+                Dashboards combine structured layouts, clear hierarchy and
+                complex metrics visualization for decision-makers.
+              </p>
+            </div>
+
+            <div className="dashboards-grid">
+              {dashboards.map((img, index) => (
+                <ProjectCard
+                  key={img}
+                  image={`/dashboards/${img}`}
+                  onClick={() => setActiveImageIndex(index)}
+                  noCaption
+                />
+              ))}
+            </div>
+
           </div>
         )}
 
       </div>
 
-      {/* ===== MODAL ===== */}
+      {/* ================= MODAL ================= */}
+
       {activeImageIndex !== null && (
         <ImageModal
-          images={
-            activeTab === "charts"
-              ? charts.map((img) => `/charts/${img}`)
-              : images.map((img) => `/images/${img}`)
-          }
+          images={currentImages}
           index={activeImageIndex}
           onClose={() => setActiveImageIndex(null)}
           onPrev={() =>
             setActiveImageIndex(
-              (i) =>
-                (i! - 1 +
-                  (activeTab === "charts"
-                    ? charts.length
-                    : images.length)) %
-                (activeTab === "charts"
-                  ? charts.length
-                  : images.length)
+              (i) => (i! - 1 + currentImages.length) % currentImages.length
             )
           }
           onNext={() =>
             setActiveImageIndex(
-              (i) =>
-                (i! + 1) %
-                (activeTab === "charts"
-                  ? charts.length
-                  : images.length)
+              (i) => (i! + 1) % currentImages.length
             )
           }
         />
