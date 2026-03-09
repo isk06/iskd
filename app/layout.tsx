@@ -38,7 +38,7 @@ export default function RootLayout({
             <div>
               <h1 className="header-name">Iskander Daraev</h1>
               <p className="header-subtitle">
-                Consulting, banking & Corporate Finance - analysis, storytelling & design
+                Consulting, banking & Corporate Finance - Analysis, Storytelling & Design
               </p>
             </div>
           </div>
