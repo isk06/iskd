@@ -204,13 +204,13 @@ export default function PortfolioTabs({
               <h3>Financial & Analytical Charts</h3>
 
               <p>
-                Selected custom charts created for consulting and banking
-                presentations (mostly Excel / PowerPoint).
+                Selected custom charts created for consulting and banking presentations (mostly in Excel/PowerPoint). 
+                Emphasis on the visualization of economic information and financial metrics (revenue and EBITDA forecasts, 
+                factor analysis, multiple comparison, value map, sensitivity analysis, DCF and WACC calculations; BS, PL).
               </p>
 
               <p>
-                Focus on visualization of financial metrics, valuation models,
-                WACC / DCF calculations, sensitivity analysis and benchmarking.
+                Areas of specialization (in charts): valuation, due diligence, transactions, M&A, consulting
               </p>
             </div>
 
@@ -236,7 +236,7 @@ export default function PortfolioTabs({
               <h3>Analytical Dashboards</h3>
 
               <p>
-                Business dashboards designed for executive reporting and
+                My business dashboards designed for executive reporting and
                 consulting projects. Focus on KPI tracking, financial
                 performance monitoring and strategic analytics.
               </p>
