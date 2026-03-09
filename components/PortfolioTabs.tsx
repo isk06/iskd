@@ -205,9 +205,13 @@ export default function PortfolioTabs({ images, pdfs, charts }: Props) {
             <div className="charts-description">
               <h3>Financial & Analytical Charts</h3>
               <p>
-                Selection of advanced financial models, valuation charts,
-                multi-axis dashboards and complex analytical visualisations
-                created for consulting and banking projects.
+                Selected custom charts created for consulting and banking presentations (predominantly in Excel/PowerPoint). 
+                Emphasis on the visualization of economic information and financial metrics (revenue and EBITDA forecasts, 
+                factor analysis, multiple comparison, value map, sensitivity analysis, DCF and WACC calculations; BS, PL).
+              </p>
+
+              <p>
+                Areas of specialization (in charts): valuation, due diligence, transactions, M&A, consulting
               </p>
             </div>
 
