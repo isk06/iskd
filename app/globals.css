@@ -107,7 +107,7 @@ a:hover {
 .section {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 16px 24px;
+  padding: 16px 20px;
 }
 
 .section h2 {
@@ -813,10 +813,10 @@ a:hover {
 
 .job-layout {
   display: grid;
-  gap: 19px;
+  gap: 20px;
 
   /* New responsive grid behavior */
-  grid-template-columns: minmax(1000px, 1.0fr) minmax(250px, 0.5fr);
+  grid-template-columns: 4fr 2fr;
 
   /* Comments:
      - Left column minimum 700px (wide enough to avoid narrow text)
@@ -825,6 +825,17 @@ a:hover {
      - Right can grow up to 0.8 fraction (optional)
      - Feel free to tweak min / max values as needed
   */
+}
+
+@media (max-width: 1024px) {
+  .job-layout {
+    grid-template-columns: 1fr; /* stack vertically */
+  }
+
+  .job-sidebar {
+    position: relative; /* remove sticky on mobile */
+    top: auto;
+  }
 }
 
 
@@ -837,13 +848,25 @@ a:hover {
 .job-top-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  gap: 32px;
+}
+
+@media (max-width: 1024px) {
+  .job-top-grid {
+    grid-template-columns: 1fr; /* stack */
+  }
 }
 
 .job-bottom-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 32px;
+}
+
+@media (max-width: 768px) {
+  .job-bottom-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .divider {
