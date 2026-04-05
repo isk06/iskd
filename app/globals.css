@@ -816,7 +816,7 @@ a:hover {
   gap: 20px;
 
   /* New responsive grid behavior */
-  grid-template-columns: 4fr 2fr;
+  grid-template-columns: 5fr 2fr;
 
   /* Comments:
      - Left column minimum 700px (wide enough to avoid narrow text)
@@ -837,7 +837,6 @@ a:hover {
     top: auto;
   }
 }
-
 
 .job-main-card {
   background: #f7f8fa;

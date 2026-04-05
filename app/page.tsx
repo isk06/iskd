@@ -38,6 +38,13 @@ export default function HomePage() {
       cover: "/pdf-covers/J.P.Morgan_SCR_storytelling.png",
       title: "J.P.Morgan - SCR storytelling",
     },
+
+    {
+      file: "/pdfs/Alix.pdf",
+      cover: "/pdf-covers/Alix.jpg",
+      title: "Alix - Investor Presentation",
+    },
+
     {
       file: "/pdfs/Portfolio_I.Daraev_2025.pdf",
       cover: "/pdf-covers/Portfolio_I.Daraev_2025.png",

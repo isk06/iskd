@@ -206,7 +206,7 @@ export default function PortfolioTabs({
               <p>
                 Selected custom charts created for consulting and banking presentations (mostly in Excel/PowerPoint). 
                 Emphasis on the visualization of economic information and financial metrics (revenue and EBITDA forecasts, 
-                factor analysis, multiple comparison, value map, sensitivity analysis, DCF and WACC calculations; BS, PL).
+                factor analysis, multiple comparison, value map, sensitivity analysis, DCF and WACC calculations; BS, P&L).
               </p>
 
               <p>
